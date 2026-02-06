@@ -1,0 +1,2 @@
+.form { max-width: 320px; margin: 40px auto; display: grid; gap: 8px; }
+.error { color: red; }
