@@ -16,7 +16,11 @@ export async function OPTIONS() {
 export async function GET() {
   const config = await getConfig();
   return Response.json(config, {
-    headers: { ...corsHeaders(), "Cache-Control": "no-store" },
+    headers: {
+      ...corsHeaders(),
+      "Cache-Control": "no-store",
+      "Content-Type": "application/json; charset=utf-8",
+    },
   });
 }
 
@@ -39,5 +43,10 @@ export async function PUT(req: Request) {
       : body;
 
   const updated = await setConfig(data);
-  return Response.json(updated, { headers: { "Cache-Control": "no-store" } });
+  return Response.json(updated, {
+    headers: {
+      "Cache-Control": "no-store",
+      "Content-Type": "application/json; charset=utf-8",
+    },
+  });
 }
