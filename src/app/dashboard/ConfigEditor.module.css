@@ -1,0 +1,97 @@
+.panel {
+  margin-top: 24px;
+  padding: 20px;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  background: #fff;
+  width: 100%;
+  max-width: 900px;
+}
+
+.header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.status {
+  font-size: 12px;
+  color: #666;
+}
+
+.textarea {
+  width: 100%;
+  min-height: 320px;
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  background: #fafafa;
+  resize: vertical;
+}
+
+.actions {
+  margin-top: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #111;
+  background: #111;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.error {
+  color: #b42318;
+  font-size: 13px;
+}
+
+.hint {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+@media (prefers-color-scheme: dark) {
+  .panel {
+    border-color: #2a2a2a;
+    background: #0f0f10;
+  }
+
+  .status,
+  .hint {
+    color: #9a9a9a;
+  }
+
+  .textarea {
+    border-color: #2a2a2a;
+    background: #151518;
+    color: #f1f1f1;
+  }
+
+  .button {
+    border-color: #f1f1f1;
+    background: #f1f1f1;
+    color: #111;
+  }
+
+  .error {
+    color: #ff8f8f;
+  }
+}

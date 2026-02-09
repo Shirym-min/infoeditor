@@ -1,4 +1,5 @@
 import { getCurrentUser } from "@/lib/auth";
+import ConfigEditor from "./ConfigEditor";
 
 export default async function DashboardPage() {
   const user = await getCurrentUser();
@@ -11,6 +12,7 @@ export default async function DashboardPage() {
     <div>
       <h1>Dashboard</h1>
       <p>{user.email}</p>
+      <ConfigEditor />
     </div>
   );
 }
